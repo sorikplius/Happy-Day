@@ -1,0 +1,83 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://GFX/Background/bg_layer1.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/candles_.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://GFX/Players/bunny1_jump.png" type="Texture" id=3]
+[ext_resource path="res://GFX/Players/bunny1_ready.png" type="Texture" id=4]
+[ext_resource path="res://GFX/Players/bunny2_jump.png" type="Texture" id=5]
+[ext_resource path="res://GFX/Players/bunny2_ready.png" type="Texture" id=6]
+[ext_resource path="res://GFX/Particles/portal_yellowParticle.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/BGM.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Loading.gd" type="Script" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="Loading" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 267.0
+margin_top = 164.0
+margin_right = 757.0
+margin_bottom = 436.0
+alignment = 1
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 490.0
+margin_bottom = 77.0
+custom_colors/font_color = Color( 0.917647, 0.945098, 0.0705882, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Choose a bunny!"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 81.0
+margin_right = 490.0
+margin_bottom = 272.0
+alignment = 1
+
+[node name="Yellowbunny" type="TextureButton" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 110.0
+margin_right = 230.0
+margin_bottom = 191.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 234.0
+margin_right = 254.0
+margin_bottom = 191.0
+texture = ExtResource( 7 )
+stretch_mode = 4
+
+[node name="Purplebunny" type="TextureButton" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 258.0
+margin_right = 379.0
+margin_bottom = 191.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 5 )
+
+[node name="BGM" parent="." instance=ExtResource( 8 )]
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/Yellowbunny" to="." method="_on_Yellowbunny_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/Purplebunny" to="." method="_on_Purplebunny_pressed"]
