@@ -8,5 +8,5 @@
  - I added ability to pick bunny gender (playing character) and a start screen
  - Transition of the score and lives between the played levels
 
-  How to play / run the game
+  How to play / run the game:  
   Check-out the release section [Game Releases](https://github.com/sorikplius/Happy-Day/releases) - there are Windows, Mac and Linux versions available.
