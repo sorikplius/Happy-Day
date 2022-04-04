@@ -1,7 +1,5 @@
-# Hello
-  
 ## About the project.
-  This project was created by me, using tutorial Udemy using engine Godot. It’s a 2D Platformer, all assets are commercial-free for education (provided by the tutorial +   some custom ones I added).
+  This project was created by me, using tutorial [Udemy](https://www.udemy.com/) using engine [Godot](https://godotengine.org/). It’s a 2D Platformer, all assets are commercial-free for education (provided by the tutorial +   some custom ones I added).
 
 ## Game idea.
   You’re a happy bunny, running fast, jumping high, avoiding the enemy, and collecting coins. 
