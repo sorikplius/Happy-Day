@@ -12,4 +12,4 @@ You’re a happy bunny, running fast, jumping high, avoiding the enemy, and coll
 - Transition of the score and lives between the played levels
 
 #How to play / run the game
-Check-out the release section #[Game Releases](https://github.com/sorikplius/Happy-Day/releases) - there are Windows, Mac and Linux versions available.
+Check-out the release section [Game Releases](https://github.com/sorikplius/Happy-Day/releases) - there are Windows, Mac and Linux versions available.
