@@ -1,5 +1,7 @@
 extends Control
 
+func _ready():
+	$CenterContainer/VBoxContainer/HBoxContainer2/score.text = str(Global.coins)
 
 func _on_RessetButton_pressed():
 	Global.coins = 0

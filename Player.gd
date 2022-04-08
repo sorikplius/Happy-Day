@@ -12,6 +12,18 @@ signal yellow
 
 func _ready():
 	add_to_group("Player")
+	bunny_gender()
+	
+func bunny_gender():
+	var yellow = load("res://World/AnimatedSprite.tscn")
+	var purple = load("res://Scenes/purple.tscn")
+	var player_color
+	if Global.yellow == true:
+		player_color = yellow.instance()
+		add_child(player_color)
+	elif Global.purple == true:
+		player_color = purple.instance()
+		add_child(player_color)
 
 func _physics_process(delta):
 	applay_gravity()

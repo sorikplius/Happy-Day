@@ -31,7 +31,7 @@ func life_up():
 	update_gui()
 
 func win_game():
-	get_tree().change_scene("res://World/GameWin.tscn")
+	get_tree().change_scene("res://Scenes/YouWin.tscn")
 
 func next_level():
 	var scene_level = get_tree().current_scene.name

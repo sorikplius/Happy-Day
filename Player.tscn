@@ -1,6 +1,5 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://World/AnimatedSprite.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
 [ext_resource path="res://GFX/Background/bg_layer1.png" type="Texture" id=3]
 [ext_resource path="res://GFX/Background/bg_layer2.png" type="Texture" id=4]
@@ -24,9 +23,6 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource( 1 )
-
-[node name="yellow" parent="." instance=ExtResource( 1 )]
-playing = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -95,5 +91,3 @@ volume_db = -5.0
 [node name="Hurt" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
 volume_db = -5.0
-
-[connection signal="yellow" from="." to="yellow" method="_on_Player_yellow"]

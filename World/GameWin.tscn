@@ -12,7 +12,18 @@ margin_right = 812.0
 margin_right = 600.0
 text = "You Win!"
 
-[node name="HBoxContainer" parent="CenterContainer/VBoxContainer" index="1"]
+[node name="HBoxContainer2" parent="CenterContainer/VBoxContainer" index="1"]
+margin_right = 600.0
+
+[node name="Label" parent="CenterContainer/VBoxContainer/HBoxContainer2" index="0"]
+margin_left = 67.0
+margin_right = 489.0
+
+[node name="Score" parent="CenterContainer/VBoxContainer/HBoxContainer2" index="1"]
+margin_left = 493.0
+margin_right = 532.0
+
+[node name="HBoxContainer" parent="CenterContainer/VBoxContainer" index="2"]
 margin_right = 600.0
 
 [node name="RessetButton" parent="CenterContainer/VBoxContainer/HBoxContainer" index="0"]
